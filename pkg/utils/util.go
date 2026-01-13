@@ -112,7 +112,6 @@ const (
 	IMPORT_FAILED LicenseImportStatusCode = iota + 1
 	IMPORT_LICENSE_CREATED
 	IMPORT_LICENSE_UPDATED
-	IMPORT_LICENSE_UPDATED_EXCEPT_TEXT
 )
 
 func InsertOrUpdateLicenseOnImport(lic *models.LicenseImportDTO, userId uuid.UUID) (string, LicenseImportStatusCode) {
@@ -828,5 +827,4 @@ func AddChangelogsForUser(tx *gorm.DB, userId uuid.UUID,
 	}
 
 	return nil
-
 }
